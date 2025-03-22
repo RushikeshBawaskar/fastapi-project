@@ -18,6 +18,11 @@ jobs:
         run: echo "this job is because push"
       - name: pulling branch
         uses: actions/checkout@v2
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13' 
+      - run: python my_script.py
 
   pull_request_job:
     if: github.event_name == 'pull_request'
