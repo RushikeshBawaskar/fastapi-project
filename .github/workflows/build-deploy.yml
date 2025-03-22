@@ -12,7 +12,7 @@ on:
 jobs:
   push_job:
     if: github.event_name == 'push'
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: first step
         run: echo "this job is because push"
@@ -21,7 +21,7 @@ jobs:
 
   pull_request_job:
     if: github.event_name == 'pull_request'
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: first step
         run: echo "this job is because pull request"
