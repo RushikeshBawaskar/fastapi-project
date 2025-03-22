@@ -1,0 +1,16 @@
+name: build and deploy code
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+on: 
+  push:
+    branches:
+      - main
+    jobs:
+      sample_job:
+        runs_on: ubuntu-latest
+        steps:
+          - name: first step
+            run: echo "starting"
+          - name: pulling branch
+            uses: actions/checkoutv2
+
