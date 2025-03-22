@@ -18,3 +18,12 @@ class User(BaseModel):
     class Config:
         orm_mode = True
     
+    
+class Token(BaseModel):
+    token: str
+    token_type: str
+    
+    
+class TokenData(BaseModel):
+    id:int
+    
